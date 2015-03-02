@@ -29,15 +29,15 @@ __Please Make sure you have followed the above mentioned steps :)__
 
 * [Syntax](#syntax)
 * [Doctype](#doctype)
-* [Language attribute](#language)
-* [Internet Explorer compatibility mode](#ie)
-* [Character encoding](#character)
-* [CSS and JavaScript includes](#css)
+* [Language attribute](#language-attr)
+* [Internet Explorer compatibility mode](#ie-mode)
+* [Character encoding](#char-encode)
+* [CSS and JavaScript includes](#css-js-includes)
 * [Practicality over purity](#practicality)
-* [Attribute order](#attribute)
-* [Boolean attributes](#boolean)
-* [Reducing markup](#reducing)
-* [JavaScript generated markup](#js)
+* [Attribute order](#attr-order)
+* [Boolean attributes](#boolean-attr)
+* [Reducing markup](#reducing-markup)
+* [JavaScript generated markup](#js-gen-markup)
 
 
 
@@ -72,7 +72,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </html>
 ```
 
-## <a id="language"></a>Language
+## <a id="language-attr"></a>Language
 - Developers are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 - Read more about the `lang` [attribute in the spec.](http://www.w3.org/html/wg/drafts/html/master/#the-html-element)
 - Sitepoint [list of language codes.](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/)
@@ -83,7 +83,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </html>
 ```
 
-## <a id="ie"></a>Internet Explorer compatibility mode
+## <a id="ie-mode"></a>Internet Explorer compatibility mode
 - Internet Explorer supports the use of a document compatibility `<meta>` tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with **edge mode.**
 - For more information, read this awesome [Stack Overflow article](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e).
 
@@ -104,7 +104,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </IfModule>
 ```
 
-## Character Encoding
+## <a id="char-encode"></a>Character Encoding
 - Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).
 
 ```html
@@ -113,7 +113,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </head>
 ```
 
-## CSS and JavaScript includes
+## <a id="css-js-includes"></a>CSS and JavaScript includes
 - As per the HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
 
 ```html
@@ -129,10 +129,10 @@ __Please Make sure you have followed the above mentioned steps :)__
 <script src="code-guide.js"></script>
 ```
 
-## Practicality over purity
+## <a id="practicality"></a>Practicality over purity
 - Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
 
-## Attribute order
+## <a id="attr-order"></a>Attribute order
 HTML attributes should come in this particular order for easier reading of code.
 
 - `class`
@@ -153,7 +153,7 @@ Classes make for great reusable components, so they come first. Ids are more spe
 
 <img src="..." alt="...">
 ```
-## Boolean attributes
+## <a id="boolean-attr"></a>Boolean attributes
 - A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.
 
 - The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
@@ -170,7 +170,7 @@ Classes make for great reusable components, so they come first. Ids are more spe
 </select>
 ```
 
-## Reducing markup
+## <a id="reducing-markup"></a>Reducing markup
 Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:
 
 ```html
@@ -183,5 +183,5 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 <img class="avatar" src="...">
 ```
 
-## JavaScript generated markup
+## <a id="js-gen-markup"></a>JavaScript generated markup
 Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.
