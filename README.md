@@ -1,2 +1,2 @@
 # DBG-html-standards
-DBG HTML Coding Standard.
+DBG HTML Coding Standards.
