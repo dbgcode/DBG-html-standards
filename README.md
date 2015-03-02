@@ -30,14 +30,14 @@ __Please Make sure you have followed the above mentioned steps :)__
 * [Syntax](#syntax)
 * [Doctype](#doctype)
 * [Language attribute](#language)
-* [Internet Explorer compatibility mode](#ie compatibility mode)
-* [Character encoding](#character encoding)
-* [CSS and JavaScript includes](#css and js includes)
-* [Practicality over purity](#practicality over purity)
-* [Attribute order](#attribute order)
-* [Boolean attributes](#boolean attributes)
-* [Reducing markup](#reducing markup)
-* [JavaScript generated markup](#js generated markup)
+* [Internet Explorer compatibility mode](#ie)
+* [Character encoding](#character)
+* [CSS and JavaScript includes](#css)
+* [Practicality over purity](#practicality)
+* [Attribute order](#attribute)
+* [Boolean attributes](#boolean)
+* [Reducing markup](#reducing)
+* [JavaScript generated markup](#js)
 
 
 
