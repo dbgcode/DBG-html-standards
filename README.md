@@ -54,6 +54,9 @@ __Please Make sure you have followed the above mentioned steps :)__
 - Always use lowercase tag and attribute names.
 - Don't include a trailing slash in self-closing elements—the HTML5 spec says they're optional.
 - Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
+- Paragraphs of text should always be placed in a `<p>` tag. Never use multiple `<br>` tags.
+- Items in list form should always be in `<ul>`, `<ol>`, or `<dl>`. Never use a set of `<div>` or `<p>`.
+- Every form input that has text attached should utilize a <label> tag. Especially radio or checkbox elements.
 
 ```html
 <!DOCTYPE html>
