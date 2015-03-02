@@ -30,14 +30,14 @@ __Please Make sure you have followed the above mentioned steps :)__
 * [Syntax](#syntax)
 * [Doctype](#doctype)
 * [Language attribute](#language)
-* [Character encoding](#syntax)
-* [Internet Explorer compatibility mode](#character)
-* [CSS and JavaScript includes](#syntax)
-* [Practicality over purity](#syntax)
-* [Attribute order](#syntax)
-* [Boolean attributes](#syntax)
-* [Reducing markup](#syntax)
-* [JavaScript generated markup](#syntax)
+* [Internet Explorer compatibility mode](#ie compatibility mode)
+* [Character encoding](#character encoding)
+* [CSS and JavaScript includes](#css and js includes)
+* [Practicality over purity](#practicality over purity)
+* [Attribute order](#attribute order)
+* [Boolean attributes](#boolean attributes)
+* [Reducing markup](#reducing markup)
+* [JavaScript generated markup](#js generated markup)
 
 
 
@@ -114,7 +114,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 ```
 
 ## CSS and JavaScript includes
-- Per HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
+- As per the HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
 
 ```html
 <!-- External CSS -->
@@ -131,3 +131,57 @@ __Please Make sure you have followed the above mentioned steps :)__
 
 ## Practicality over purity
 - Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
+
+## Attribute order
+HTML attributes should come in this particular order for easier reading of code.
+
+- `class`
+- `id`, `name`
+- `data-*`
+- `src`, `for`, `type`, `href`, `value`
+- `title`, `alt`
+- `aria-*`, `role`
+
+Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.
+
+```html
+<a class="..." id="..." data-modal="toggle" href="#">
+  Example link
+</a>
+
+<input class="form-control" type="text">
+
+<img src="..." alt="...">
+```
+## Boolean attributes
+- A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.
+
+- The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
+
+- In short, don't add a value.
+
+```html
+<input type="text" disabled>
+
+<input type="checkbox" value="1" checked>
+
+<select>
+  <option value="1" selected>1</option>
+</select>
+```
+
+## Reducing markup
+Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:
+
+```html
+<!-- Not so great -->
+<span class="avatar">
+  <img src="...">
+</span>
+
+<!-- Better -->
+<img class="avatar" src="...">
+```
+
+## JavaScript generated markup
+Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.
