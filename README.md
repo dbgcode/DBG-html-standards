@@ -41,7 +41,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 
 
 
-## Syntax
+## <a id="syntax"></a>Syntax
 - Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.
 - Nested elements should be indented once (two spaces).
 - Always use double quotes, never single quotes, on attributes.
@@ -61,7 +61,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </html>
 ```
 
-## Doctype
+## <a id="doctype"></a>Doctype
 - Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.
 
 ```html
@@ -72,7 +72,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </html>
 ```
 
-## Language
+## <a id="language"></a>Language
 - Developers are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 - Read more about the `lang` [attribute in the spec.](http://www.w3.org/html/wg/drafts/html/master/#the-html-element)
 - Sitepoint [list of language codes.](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/)
@@ -83,7 +83,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </html>
 ```
 
-## Internet Explorer compatibility mode ##
+## <a id="ie"></a>Internet Explorer compatibility mode
 - Internet Explorer supports the use of a document compatibility `<meta>` tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with **edge mode.**
 - For more information, read this awesome [Stack Overflow article](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e).
 
