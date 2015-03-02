@@ -3,7 +3,12 @@
 Before you start, do you know why coding standards matters?
 >It is just because every line of code should appear to be written by a single person, no matter the number of developers or contributors. So please make sure you follow all the instructions mentioned below.
 
-## SET UP ENVIRONMENT
+# General principles
+
+- Strictly enforce the agreed upon style.
+- If in doubt when deciding upon a style, use existing, common patterns.
+
+## Set Up Environment
 > Your code editor is your main development tool. you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins. We encourage using code editors like
 
 - [Sublime](http://www.sublimetext.com/)
@@ -25,11 +30,12 @@ For more details, please refer to the [EditorConfig](http://editorconfig.org/) p
 ## Note
 __Please Make sure you have followed the above mentioned steps :)__
 
-## Table of contents.
+## Table of contents
 
 * [Syntax](#syntax)
 * [Doctype](#doctype)
 * [Language attribute](#language-attr)
+* [Naming](#naming)
 * [Internet Explorer compatibility mode](#ie-mode)
 * [Character encoding](#char-encode)
 * [CSS and JavaScript includes](#css-js-includes)
@@ -45,6 +51,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 - Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.
 - Nested elements should be indented once (two spaces).
 - Always use double quotes, never single quotes, on attributes.
+- Always use lowercase tag and attribute names.
 - Don't include a trailing slash in self-closing elements—the HTML5 spec says they're optional.
 - Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
 
@@ -72,7 +79,7 @@ __Please Make sure you have followed the above mentioned steps :)__
 </html>
 ```
 
-## <a id="language-attr"></a>Language
+## <a id="language-attr"></a>Language attribute
 - Developers are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 - Read more about the `lang` [attribute in the spec.](http://www.w3.org/html/wg/drafts/html/master/#the-html-element)
 - Sitepoint [list of language codes.](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/)
@@ -82,6 +89,13 @@ __Please Make sure you have followed the above mentioned steps :)__
   <!-- ... -->
 </html>
 ```
+
+## <a id="naming"></a>Naming
+- Developers are encouraged to strictly follow the BEM naming convension.
+- BEM – meaning block, element, modifier – is a front-end naming methodology thought up by the guys at [Yandex.](http://www.yandex.ru/) It is a smart way of naming your CSS classes to give them more transparency and meaning to other developers. They are far more strict and informative, which makes the BEM naming convention ideal for teams of developers on larger projects that might last a while.
+- Read more about the `BEM Methodology`
+ - [csswizardry](http://goo.gl/JDHnzM)
+ - [Tutsplus](http://goo.gl/jhHwBt)
 
 ## <a id="ie-mode"></a>Internet Explorer compatibility mode
 - Internet Explorer supports the use of a document compatibility `<meta>` tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with **edge mode.**
